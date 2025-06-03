@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول - الجامعة العربية المفتوحة</title>
+  <style> 
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f1f1f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 80px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .logo img {
+      width: 180px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    .forgot-password {
+      margin-top: 15px;
+    }
+
+    .forgot-password a {
+      color: #007bff;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-text {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #888;
+    }
+
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="logo">
+      <img src="aou-logo.png" alt="شعار الجامعة العربية المفتوحة">
+    </div>
+
+    <h2>تسجيل الدخول</h2>
+
+    <form onsubmit="login(event)">
+      <input type="text" id="username" placeholder="اسم المستخدم" required><br>
+      <input type="password" id="password" placeholder="كلمة المرور" required><br>
+      <button type="submit">دخول</button>
+    </form>
+
+    <div class="forgot-password">
+      <a href="#">هل نسيت كلمة المرور؟</a>
+    </div>
+
+    <div id="error" class="error"></div>
+
+    <div class="footer-text">
+      جميع الحقوق محفوظة © الجامعة العربية المفتوحة 2025
+    </div>
+  </div>
+
+  <script>
+    function login(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorDiv = document.getElementById('error');
+
+      if (username === "21429525" && password === "AsdfgAsdf1234123") {
+        window.location.href = 'menu.html'; // ✅ تحويل إلى صفحة الخيارات
+      } else {
+        errorDiv.textContent = "اسم المستخدم أو كلمة المرور غير صحيحة.";
+      }
+    }
+  </script>
+
+</body>
+</html>
